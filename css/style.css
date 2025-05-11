@@ -1,169 +1,270 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background: #131419;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #131419;
 }
 
 #container {
-    height: auto;
-    width: auto;
-    background: linear-gradient(to bottom, #2b2d47 10%, #181926);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: inset 1px 2px 0px rgb(255 255 255 / 18%), inset -2px -2px 2px rgb(0 0 0 / 65%);
+  height: auto;
+  width: auto;
+  background: linear-gradient(to bottom, #2b2d47 10%, #181926);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: inset 1px 2px 0px rgb(255 255 255 / 18%),
+    inset -2px -2px 2px rgb(0 0 0 / 65%);
 }
 
 #startingPage {
-    height: 220px;
-    width: 400px;
+  height: 220px;
+  width: 400px;
 }
 
 #startingPage h2,
 #winner h2 {
-    font-size: 50px;
-    color: #2fbf71;
+  font-size: 50px;
+  color: #2fbf71;
 }
 
 #startingPage #line {
-    height: 1px;
-    width: 100%;
-    background: #c3cfdb;
-    margin: 20px 0;
+  height: 1px;
+  width: 100%;
+  background: #c3cfdb;
+  margin: 20px 0;
 }
 
 #startingPage h4 {
-    font-size: 25px;
-    color: #b9b9c5;
+  font-size: 25px;
+  color: #b9b9c5;
 }
 
 #startingPage #button {
-    height: auto;
-    width: 100%;
-    margin: 30px 0;
-    display: flex;
-    flex-direction: row;
+  height: auto;
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
 }
 
 #button button {
-    height: 55px;
-    width: 180px;
-    cursor: pointer;
-    background: #29cde0;
-    border: none;
-    outline: none;
-    color: #2b2d47;
-    font-weight: bold;
-    font-size: 15px;
-    border-radius: 10px;
-    transform: scale(1);
-    box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
-    transition: 0.5s;
+  height: 55px;
+  width: 180px;
+  cursor: pointer;
+  background: #29cde0;
+  border: none;
+  outline: none;
+  color: #2b2d47;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 10px;
+  transform: scale(1);
+  box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
+  transition: 0.5s;
 }
 
 #button button:first-child {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 #startingPage #button button:hover,
 #winner #button button:hover {
-    transform: scale(0.90);
+  transform: scale(0.9);
 }
 
 #winner {
-    display: none;
+  display: none;
 }
 
 #winner #button {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #winner #button button {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #mainPage {
-    height: 550px;
-    width: 350px;
-    padding: 20px;
-    position: relative;
-    display: none;
+  height: 550px;
+  width: 350px;
+  padding: 20px;
+  position: relative;
+  display: none;
 }
 
 #mainPage #headerBtns {
-    height: 60px;
-    width: 310px;
-    border-radius: 50px;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
+  height: 60px;
+  width: 310px;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
 }
 
 #mainPage #headerBtns button {
-    height: 60px;
-    width: 160px;
-    border-radius: 50px;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 20px;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.60);
+  height: 60px;
+  width: 160px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 
 #mainPage #headerBtns #O_Turn {
-    left: 160px;
-    z-index: 3;
+  left: 160px;
+  z-index: 3;
 }
 
 #showChange {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 60px;
-    width: 160px;
-    border-radius: 50px;
-    background: #2fbf71;
-    z-index: 1;
-    transition: 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 160px;
+  border-radius: 50px;
+  background: #2fbf71;
+  z-index: 1;
+  transition: 0.2s;
 }
 
 #gameBoard {
-    height: 400px;
-    width: 330px;
-    position: absolute;
-    top: 150px;
-    left: 10px;
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-gap: 15px;
+  height: 400px;
+  width: 330px;
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 15px;
+}
+
+/* Add styles for X and O symbols */
+.symbol-x,
+.symbol-o {
+  font-size: 60px;
+  font-weight: bold;
+  color: #2fbf71;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.symbol-x {
+  position: relative;
+}
+
+.symbol-x::before,
+.symbol-x::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 60px;
+  background-color: #2fbf71;
+  border-radius: 5px;
+}
+
+.symbol-x::before {
+  transform: rotate(45deg);
+}
+
+.symbol-x::after {
+  transform: rotate(-45deg);
+}
+
+.symbol-o {
+  position: relative;
+}
+
+.symbol-o::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 10px solid #2fbf71;
+  border-radius: 50%;
 }
 
 .boxes {
-    height: 100px;
-    width: 100px;
-    box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
-    display: grid;
-    place-items: center;
-    cursor: pointer;
+  height: 100px;
+  width: 100px;
+  box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
 }
 
-.boxes i {
-    font-size: 60px;
-    color: #2fbf71;
+/* Add animation for symbols */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.symbol-x,
+.symbol-o {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Add styles for game mode selection */
+#gameMode {
+  margin-top: 20px;
+}
+
+#gameMode h4 {
+  font-size: 20px;
+  color: #b9b9c5;
+  margin-bottom: 10px;
+}
+
+#modeSelect,
+#difficultySelect {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: #2b2d47;
+  color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
+}
+
+#aiDifficulty {
+  margin-top: 15px;
+  display: none;
+}
+
+/* Improve responsive design */
+@media (max-width: 480px) {
+  #startingPage {
+    width: 300px;
+  }
+
+  #button button {
+    width: 130px;
+  }
 }
